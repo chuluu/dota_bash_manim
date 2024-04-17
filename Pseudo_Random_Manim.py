@@ -436,16 +436,14 @@ class Pseudo_Random(Scene):
 
 
     def construct(self):
-# =============================================================================
-#         img1, img2, txt = self.basher_setup_scene(True)
-#         self.play(FadeOut(img1,img2,txt))
-#         plotter_func = self.first_number_scene(True)
-#         Scene_tot_unifpmd = self.uniform_chart(plotter_func,True)
-#         
-#         self.play(FadeOut(Scene_tot_unifpmd))
-#         self.wait(2)
-# =============================================================================
+        img1, img2, txt = self.basher_setup_scene(True)
+        self.play(FadeOut(img1,img2,txt))
+        plotter_func = self.first_number_scene(True)
+        Scene_tot_unifpmd = self.uniform_chart(plotter_func,True)
+        
+        self.play(FadeOut(Scene_tot_unifpmd))
+        self.wait(2)
         [C_pmd,N_pmd,P_pmd] = self.prd_pmd(0.25)
-        #OutGroup,TextGroup = self.prd_Scene1(C_pmd)
-        #self.prd_Scene3(C_pmd, N_pmd, P_pmd, OutGroup,TextGroup)
+        OutGroup,TextGroup = self.prd_Scene1(C_pmd)
+        self.prd_Scene3(C_pmd, N_pmd, P_pmd, OutGroup,TextGroup)
         self.bash_simulation_prd(C_pmd)
